@@ -1,0 +1,17 @@
+.flex-vertical {
+  display: flex  ;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px dashed salmon;
+      align-items: center;
+      justify-content: space-around;
+      button{
+        width: 100%;
+        &:hover{
+          border: 1px solid red;
+          box-shadow: 3px 3px rgba(248, 80, 2, 0.596), -1em 0 .4em rgb(128, 0, 90);
+        }
+      }
+}
