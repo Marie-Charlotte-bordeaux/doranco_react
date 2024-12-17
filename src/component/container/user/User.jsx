@@ -1,5 +1,5 @@
 import { FullName } from "./full_name/FullName";
-import { Hobbies } from "./hobbies/hobbies";
+import { Hobbies } from "./hobbies/hobbies"; 
 
 export function User (){
 

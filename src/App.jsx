@@ -2,7 +2,7 @@ import './App.css'
 import React from 'react';
 import { Header } from './component/container/header/header';
 import { Footer } from './component/container/footer/footer';
-import { User } from './component/user/user';
+import { User } from './component/container/user/user';
 //un composant React
 function App() {
 console.log(<h1>hohohoho</h1>);
