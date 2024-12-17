@@ -3,6 +3,7 @@ import React from 'react';
 import { Header } from './component/container/header/header';
 import { Footer } from './component/container/footer/footer';
 import { User } from './component/container/user/user';
+import { Player } from './component/container/player/Player';
 //un composant React
 function App() {
 console.log(<h1>hohohoho</h1>);
@@ -22,6 +23,8 @@ function Button({ label, color }){
       {Button({ label:"valider", color: "pink" })}
       {Button({ label:"Supprimer", color: "orange"  })}
       <User/>
+      <p>Player</p>
+      <Player/>
       </div>
       <Footer/>
     </>
