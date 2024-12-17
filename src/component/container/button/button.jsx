@@ -2,6 +2,7 @@ export function Button (){
 
 
   return(
-    <button>Je click sur moi</button>
+    <button 
+    >Je click sur moi</button>
   )
 }
