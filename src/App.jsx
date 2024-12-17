@@ -2,7 +2,7 @@ import './App.css'
 import React from 'react';
 import { Header } from './component/container/header/header';
 import { Footer } from './component/container/footer/footer';
-
+import { User } from './component/user/user';
 //un composant React
 function App() {
 console.log(<h1>hohohoho</h1>);
@@ -21,7 +21,7 @@ function Button({ label, color }){
       <h1>{nom}</h1>
       {Button({ label:"valider", color: "pink" })}
       {Button({ label:"Supprimer", color: "orange"  })}
-
+      <User/>
       </div>
       <Footer/>
     </>
