@@ -7,6 +7,7 @@ import { Button } from './component/container/button/Button';
 import { Routine } from './component/container/routine/Routine';
 import  Compteur  from './component/container/compteur/Compteur';
 import Menu from './component/container/menu/Menu';
+import { ContactForm } from './component/container/contactForm/Contact-form';
 //un composant React
 function App() {
 console.log(<h1>hohohoho</h1>);
@@ -38,6 +39,7 @@ function supprimer(){
         <h1 className="text-5xl font-bold text-gray-100 tracking-wide">
           {nom}
         </h1>
+        <ContactForm />
         <Menu> <Compteur /></Menu>
         <div className="flex space-x-4">
           <Button
