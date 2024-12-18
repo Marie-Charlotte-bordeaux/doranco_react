@@ -6,6 +6,7 @@ import { Player } from './component/container/player/Player';
 import { Button } from './component/container/button/Button';
 import { Routine } from './component/container/routine/Routine';
 import  Compteur  from './component/container/compteur/Compteur';
+import Menu from './component/container/menu/Menu';
 //un composant React
 function App() {
 console.log(<h1>hohohoho</h1>);
@@ -31,6 +32,7 @@ function supprimer(){
   return (
     <div className="bg-gradient-to-br from-gray-900 to-gray-700 min-h-screen flex flex-col justify-between text-gray-200">
     <Header />
+    <Menu />
     <div className="container mx-auto p-8 bg-gray-800 rounded-lg shadow-lg">
       <div className="flex flex-col items-center space-y-6">
         <h1 className="text-5xl font-bold text-gray-100 tracking-wide">
