@@ -4,6 +4,7 @@ import { Footer } from './component/container/footer/footer';
 import { User } from './component/container/user/user';
 import { Player } from './component/container/player/Player';
 import { Button } from './component/container/button/button';
+import { Routine } from './component/container/routine/Routine';
 
 //un composant React
 function App() {
@@ -35,6 +36,7 @@ function supprimer(){
       
       <Button label="Ajouter" color="pink" gereclick={ajouter} ><p>Allez Ajoute!</p></Button>
       <Button label="Supprimer" color="orange" gereclick={supprimer} ><p>Allez Supprime!</p></Button>
+      <Routine/>
       <User 
         prenom={userData.prenom} 
         nom={userData.nom} 
