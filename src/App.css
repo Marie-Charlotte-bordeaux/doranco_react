@@ -4,14 +4,14 @@
       gap: 1rem;
       padding: 1rem;
       border-radius: 0.5rem;
-      border: 1px dashed salmon;
+      border: 1px dashed rgba(250, 128, 114, 0.13);
       align-items: center;
       justify-content: space-around;
       button{
-        width: 100%;
+        
         &:hover{
-          border: 1px solid red;
-          box-shadow: 3px 3px rgba(248, 80, 2, 0.596), -1em 0 .4em rgb(128, 0, 90);
+          border: 1px solid rgba(255, 192, 227, 0.199);
+          box-shadow: 3px 3px rgba(248, 2, 195, 0.09), -0.2em 0 1em rgb(128, 0, 90, 0.5);
         }
       }
 }

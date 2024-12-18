@@ -12,7 +12,7 @@ const nom = "MC"
 //Composant React parametré
 // eslint-disable-next-line react/prop-types
 function Button({ label, color }){
-  return <button style={{ backgroundColor: color}} >{label}</button>
+  return <button className='w-24 rounded-3xl'  style={{ backgroundColor: color}} >{label}</button>
 }
 
   return (
