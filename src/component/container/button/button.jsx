@@ -4,7 +4,7 @@ export function Button ({color, children, gereclick}){
 
   return(
     <button 
-    className = "bg-sky-500/50 w-24 decoration-slate-50  b-none p-2 rounded-full hover:bg-slate-50 shadow-lg hover:shadow-cyan-500/50"
+    className = "px-6 py-3 rounded-lg text-white shadow-md transition duration-300 ease-in-out hover:shadow-lg hover:opacity-90 ${className}"
     style={{
       backgroundColor: color ? color : "black",
     }}

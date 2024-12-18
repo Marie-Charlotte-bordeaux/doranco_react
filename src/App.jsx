@@ -29,25 +29,54 @@ function supprimer(){
 
 
   return (
-    <>
-      <Header/>
-    <div className='flex-vertical'>
-      <h1>{nom}</h1>
-      
-      <Button label="Ajouter" color="pink" gereclick={ajouter} ><p>Allez Ajoute!</p></Button>
-      <Button label="Supprimer" color="orange" gereclick={supprimer} ><p>Allez Supprime!</p></Button>
-      <Routine/>
-      <User 
-        prenom={userData.prenom} 
-        nom={userData.nom} 
-        age={userData.age} 
-        hobbies={userData.hobbies} 
-      />
-      <p>Player</p>
-      <Player/>
+    <div className="bg-gradient-to-br from-gray-900 to-gray-700 min-h-screen flex flex-col justify-between text-gray-200">
+    <Header />
+    <div className="container mx-auto p-8 bg-gray-800 rounded-lg shadow-lg">
+      <div className="flex flex-col items-center space-y-6">
+        <h1 className="text-5xl font-bold text-gray-100 tracking-wide">
+          {nom}
+        </h1>
+
+        <div className="flex space-x-4">
+          <Button
+            label="Ajouter"
+            color="pink"
+            gereclick={ajouter}
+            className="transition-transform transform hover:scale-105"
+          >
+            <p className="text-white font-semibold text-lg">Allez Ajoute !</p>
+          </Button>
+          <Button
+            label="Supprimer"
+            color="orange"
+            gereclick={supprimer}
+            className="transition-transform transform hover:scale-105"
+          >
+            <p className="text-white font-semibold text-lg">Allez Supprime !</p>
+          </Button>
+        </div>
+
+        <div className="w-full mt-4">
+          <Routine />
+        </div>
+
+        <div className="w-full">
+          <User
+            prenom={userData.prenom}
+            nom={userData.nom}
+            age={userData.age}
+            hobbies={userData.hobbies}
+          />
+        </div>
+
+        <div className="w-full text-center">
+          <p className="text-2xl font-semibold text-gray-300">🎵 Player 🎵</p>
+          <Player />
+        </div>
       </div>
-      <Footer/>
-    </>
+    </div>
+    <Footer />
+  </div>
   )
 }
 
