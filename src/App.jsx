@@ -1,11 +1,11 @@
 import './App.css'
-import { Header } from './component/container/header/header';
-import { Footer } from './component/container/footer/footer';
+import { Header } from './component/container/header/Header';
+import { Footer } from './component/container/footer/Footer';
 import { User } from './component/container/user/user';
 import { Player } from './component/container/player/Player';
-import { Button } from './component/container/button/button';
+import { Button } from './component/container/button/Button';
 import { Routine } from './component/container/routine/Routine';
-
+import  Compteur  from './component/container/compteur/Compteur';
 //un composant React
 function App() {
 console.log(<h1>hohohoho</h1>);
@@ -36,7 +36,7 @@ function supprimer(){
         <h1 className="text-5xl font-bold text-gray-100 tracking-wide">
           {nom}
         </h1>
-
+          <Compteur />
         <div className="flex space-x-4">
           <Button
             label="Ajouter"

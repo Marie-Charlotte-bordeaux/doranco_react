@@ -1,4 +1,4 @@
-import { Button } from '../button/button';
+import { Button } from '../button/Button';
 import PropTypes from 'prop-types';
 export function Routine (){
 
