@@ -8,7 +8,7 @@ export function FullName ({ prenom, nom, age}){
   return(
     <>
     <section>
-    <h3>Nom Complet : </h3>
+    <h3 className="underline">Nom Complet : </h3>
       <FirstName prenom={prenom} />
       <LastName nom={nom} />
       <p>Âge : {age} ans</p>

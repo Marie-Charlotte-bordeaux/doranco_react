@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-export function Button ({color, children}){
+export function Button ({color, children, gereclick}){
 
 
   return(
@@ -8,6 +8,7 @@ export function Button ({color, children}){
     style={{
       backgroundColor: color ? color : "black",
     }}
+    onClick={gereclick}
     >
       {children}
       </button>
@@ -16,5 +17,6 @@ export function Button ({color, children}){
 
 Button.propTypes = {
   color: PropTypes.string,
+  gereclick: PropTypes.func,
   children: PropTypes.node
 }

@@ -6,7 +6,7 @@ export function Hobbies({ hobbies }) {
       <h3>Hobbies</h3>
       <ul>
         {hobbies.map((hobby) => (
-          <li key={hobby.id}>{hobby.name}</li>
+          <li className="italic list-disc" key={hobby.id}>{hobby.name}</li>
         ))}
       </ul>
     </>

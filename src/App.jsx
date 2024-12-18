@@ -3,6 +3,7 @@ import { Header } from './component/container/header/header';
 import { Footer } from './component/container/footer/footer';
 import { User } from './component/container/user/user';
 import { Player } from './component/container/player/Player';
+import { Button } from './component/container/button/button';
 
 //un composant React
 function App() {
@@ -18,19 +19,22 @@ const userData = {
     {id:"0b", name:"uranium"},
   ]
 }
-//Composant React parametré
-// eslint-disable-next-line react/prop-types
-function Button({ label, color }){
-  return <button className='w-24 rounded-3xl'  style={{ backgroundColor: color}} >{label}</button>
+function ajouter(){
+  alert(' Vous avez ajouté')
 }
+function supprimer(){
+  alert('Vous avez supprimé')
+}
+
 
   return (
     <>
       <Header/>
     <div className='flex-vertical'>
       <h1>{nom}</h1>
-      {Button({ label:"valider", color: "pink" })}
-      {Button({ label:"Supprimer", color: "orange"  })}
+      
+      <Button label="Ajouter" color="pink" gereclick={ajouter} ><p>Allez Ajoute!</p></Button>
+      <Button label="Supprimer" color="orange" gereclick={supprimer} ><p>Allez Supprime!</p></Button>
       <User 
         prenom={userData.prenom} 
         nom={userData.nom} 

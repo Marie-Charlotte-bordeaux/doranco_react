@@ -7,7 +7,7 @@ export function User ({ prenom, nom, age, hobbies }){
   return(
     <>
     <section>
-    <h2>Information utilsateur</h2>
+    <h2 className="font-extrabold	 ">Information utilsateur</h2>
     <FullName prenom={prenom} nom={nom} age={age} />
     <Hobbies hobbies={hobbies} />
     </section>
