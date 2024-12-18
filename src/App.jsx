@@ -13,7 +13,10 @@ const userData = {
   prenom: "Marie",
   nom: "Curie", 
   age: 36,
-  hobbies: "radioactivité"
+  hobbies: [
+    {id:"0a", name:"radioactivité"},
+    {id:"0b", name:"uranium"},
+  ]
 }
 //Composant React parametré
 // eslint-disable-next-line react/prop-types

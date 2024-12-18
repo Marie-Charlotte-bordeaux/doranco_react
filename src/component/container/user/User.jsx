@@ -18,8 +18,13 @@ export function User ({ prenom, nom, age, hobbies }){
 
 
 User.propTypes = {
-  prenom: PropTypes.string,
-  nom: PropTypes.string,
-  age: PropTypes.number,
-  hobbies: PropTypes.string,
+  prenom: PropTypes.string.isRequired,
+  nom: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  hobbies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired, 
 }
