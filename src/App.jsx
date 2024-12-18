@@ -32,13 +32,13 @@ function supprimer(){
   return (
     <div className="bg-gradient-to-br from-gray-900 to-gray-700 min-h-screen flex flex-col justify-between text-gray-200">
     <Header />
-    <Menu />
+
     <div className="container mx-auto p-8 bg-gray-800 rounded-lg shadow-lg">
       <div className="flex flex-col items-center space-y-6">
         <h1 className="text-5xl font-bold text-gray-100 tracking-wide">
           {nom}
         </h1>
-          <Compteur />
+        <Menu> <Compteur /></Menu>
         <div className="flex space-x-4">
           <Button
             label="Ajouter"
