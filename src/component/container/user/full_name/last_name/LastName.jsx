@@ -1,7 +1,16 @@
-export function LastName (){
+import PropTypes from 'prop-types';
 
-var lastName = "Bordeaux"
-  return(
-    <p>{lastName}</p>
+
+export function LastName ({ nom }){
+
+
+  return(<>
+  <p>Nom : {nom}</p>
+  </>
   )
 }
+
+
+LastName.propTypes = {
+  nom: PropTypes.string,
+  }

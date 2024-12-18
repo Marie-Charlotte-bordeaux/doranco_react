@@ -1,7 +1,14 @@
-export function FirstName (){
+import PropTypes from 'prop-types';
+export function FirstName ({ prenom }){
 
-  var firstName = "Marie"
+  
     return(
-      <p>{firstName}</p>
+      <>
+      <p>Prénom : {prenom}</p>
+      </>
     )
+  }
+
+  FirstName.propTypes = {
+    prenom: PropTypes.string
   }
