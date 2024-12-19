@@ -1,60 +1,66 @@
 import PropTypes from "prop-types";
 import { Button } from "../../button/Button";
 import { useState } from "react";
-export function Hobbies({ hobbies }) {
+export default function Hobbies({ hobbies }) {
 
-  const [HobbiesInput, setHobbiesInput] = useState("");
-  const [EmptyError, setEMptyError] = useState("");
+  const [hobbyInput, setHobbyInput] = useState('')
+  const [hobbyError, setHobbyError] = useState('')
 
-  const [newHobbies, setnewHobbies] = useState(hobbies);
+  const [newHobbies, setNewHobbies] = useState(hobbies);
 
-  function gereHobbie(event) {
-    // Récupérer l'entrée de l'utilisateur
-    const valeur = event.target.value;
-    // Stocker la valeur de l'input dans la variable d'état
-    setHobbiesInput(valeur);
-    // Remettre à zéro l'erreur si l'utilisateur saisit quelque chose
-    setEMptyError("");
+  function gereHobbyInput(e) {
+    setHobbyInput(e.target.value);
+    setHobbyError("");
   }
 
-  function ajouterHobby() {
-    if (HobbiesInput === "") {
-      setEMptyError("Veuillez renseigner votre hobbie");
-      return;
+  function ajouteHobby() {
+    if (hobbyInput === "") {
+      setHobbyError('Nom du hobby obligatoire !')
+      return
     }
-    setnewHobbies([...newHobbies, { id: 'test', name: HobbiesInput }]);
+    setNewHobbies([...newHobbies, { id: Date.now(), name: hobbyInput }]);
   }
-
   return (
-    <>
-      <h3>Hobbies</h3>
-      <div>
-        <input
-          className="bg-neutral-800 p-2 w-full text-white"
-          type="text"
-          value={HobbiesInput}
-          onChange={gereHobbie}
-          placeholder="Votre hobbie"
-        />
-        <p className="text-red-600">{EmptyError}</p>
-        <Button gereclick={ajouterHobby}>Ajouter</Button>
-      </div>
-      <ul>
-        {hobbies.map((hobby) => (
-          <li className="italic list-disc" key={hobby.id}>
-            {hobby.name}
-          </li>
-        ))}
-      </ul>
-    </>
-  );
-}
+    <div className="p-6 bg-gray-800 rounded-lg shadow-lg">
+    {/* Input pour le hobby */}
+    <div className="mb-4">
+      <input
+        type="text"
+        onChange={gereHobbyInput}
+        placeholder="Entrez un hobby"
+        className="w-full p-3 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      {hobbyError && (
+        <p className="mt-2 text-sm text-red-500">{hobbyError}</p>
+      )}
+    </div>
+  
+    {/* Bouton pour ajouter */}
+    <div className="mb-6">
+      <Button
+        gereclick={ajouteHobby}
+        className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md transition-colors"
+      >
+        Ajouter
+      </Button>
+    </div>
+  
+    {/* Liste des hobbies */}
+    <ul className="space-y-2">
+      {newHobbies.map((hobby) => (
+        <li
+          key={hobby.id}
+          className="p-3 bg-gray-700 text-white rounded-md border border-gray-600"
+        >
+          {hobby.name}
+        </li>
+      ))}
+    </ul>
+  </div>
+  
 
+  )
+}
 Hobbies.propTypes = {
-  hobbies: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};
+  hobbies: PropTypes.array.isRequired,
+}
