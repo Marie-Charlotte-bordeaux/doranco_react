@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 import { Button } from "../../button/Button";
 import { useState } from "react";
-export function Hobbies({ hobbies: initialHobbies }) {
-  const [hobbies, setHobbies] = useState(initialHobbies);
+export function Hobbies({ hobbies }) {
+
   const [HobbiesInput, setHobbiesInput] = useState("");
   const [EmptyError, setEMptyError] = useState("");
+
+  const [newHobbies, setnewHobbies] = useState(hobbies);
 
   function gereHobbie(event) {
     // Récupérer l'entrée de l'utilisateur
@@ -20,10 +22,7 @@ export function Hobbies({ hobbies: initialHobbies }) {
       setEMptyError("Veuillez renseigner votre hobbie");
       return;
     }
-    // Ajouter un nouveau hobby à la liste
-    const newHobby = { id: hobbies.length + 1, name: HobbiesInput };
-    setHobbies([...hobbies, newHobby]);
-    setHobbiesInput("");
+    setnewHobbies([...newHobbies, { id: 'test', name: HobbiesInput }]);
   }
 
   return (
