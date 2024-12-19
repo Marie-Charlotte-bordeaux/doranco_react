@@ -1,25 +1,21 @@
 import { FirstName } from "./first_name/FirstName"
 import { LastName } from "./last_name/LastName"
-import PropTypes from 'prop-types';
+import { useContext } from "react"
+import { UtilisateurContext } from "../../../../App"
 
-export function FullName ({ prenom, nom, age}){
+export function FullName (){
+    const user = useContext(UtilisateurContext) //UtilisateurContext
 
 
   return(
     <>
     <section>
     <h3 className="underline">Nom Complet : </h3>
-      <FirstName prenom={prenom} />
-      <LastName nom={nom} />
-      <p>Âge : {age} ans</p>
+      <FirstName />
+      <LastName/>
+      <p>Âge :  ans</p>
     </section>
     </>
   )
 }
 
-
-FullName.propTypes = {
-  prenom: PropTypes.string,
-  nom: PropTypes.string,
-  age: PropTypes.number,
-}

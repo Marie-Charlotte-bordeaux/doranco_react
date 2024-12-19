@@ -1,16 +1,13 @@
-import PropTypes from 'prop-types';
+import { useContext } from 'react';
+import { UtilisateurContext } from '../../../../../App';
 
 
-export function LastName ({ nom }){
+export function LastName (){
 
+    const user = useContext(UtilisateurContext) //UtilisateurContext
 
   return(<>
-  <p>Nom : {nom}</p>
+  <p>{user.nom}</p>
   </>
   )
 }
-
-
-LastName.propTypes = {
-  nom: PropTypes.string,
-  }

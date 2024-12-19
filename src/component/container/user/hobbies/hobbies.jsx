@@ -1,12 +1,16 @@
-import PropTypes from "prop-types";
+import { UtilisateurContext } from "../../../../App";
+import { useContext } from "react";
 import { Button } from "../../button/Button";
 import { useState } from "react";
-export default function Hobbies({ hobbies }) {
+
+export default function Hobbies() {
+
+  const user = useContext(UtilisateurContext)
 
   const [hobbyInput, setHobbyInput] = useState('')
   const [hobbyError, setHobbyError] = useState('')
 
-  const [newHobbies, setNewHobbies] = useState(hobbies);
+  const [newHobbies, setNewHobbies] = useState(user.hobbies);
 
   function gereHobbyInput(e) {
     setHobbyInput(e.target.value);
@@ -60,7 +64,4 @@ export default function Hobbies({ hobbies }) {
   
 
   )
-}
-Hobbies.propTypes = {
-  hobbies: PropTypes.array.isRequired,
 }
